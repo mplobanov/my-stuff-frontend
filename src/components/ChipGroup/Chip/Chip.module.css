@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.chip {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+
+    border-radius: 1rem;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(15px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.regular {
+    color: rgba(58, 58, 58, 1);
+}
+
+.selected {
+    background: rgba(100, 100, 100, 1);
+    color: white
+}

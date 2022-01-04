@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.cardWrap {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.75rem;
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+
+    overflow: hidden;
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.quantity {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+}
+
+.name {
+    position: absolute;
+    left: 0.75rem;
+    bottom: 0.75rem;
+
+    max-width: 6rem;
+
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.45rem;
+
+    text-shadow:
+                0 0 0.1rem #FFFFFF,
+                0.1rem 0 0.1rem #FFFFFF,
+                0 0.1rem 0.1rem #FFFFFF,
+                -0.1rem 0 0.1rem #FFFFFF,
+                0 -0.1rem 0.1rem #FFFFFF,
+                -0.1rem 0.1rem 0.1rem #FFFFFF,
+                0.1rem -0.1rem 0.1rem #FFFFFF,
+                0.1rem -0.1rem 0.1rem #FFFFFF,
+                -0.1rem 0.1rem 0.1rem #FFFFFF,
+                -0.1rem -0.1rem 0.1rem #FFFFFF,
+                0.1rem 0.1rem 0.1rem #FFFFFF;
+}
+
+.status {
+    position: absolute;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    right: 0.75rem;
+    top: 0.75rem;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.6rem;
+    line-height: 0.55rem;
+
+    writing-mode:vertical-rl;
+
+    text-shadow:
+            0 0 0.1rem #FFFFFF,
+            0.1rem 0 0.1rem #FFFFFF,
+            0 0.1rem 0.1rem #FFFFFF,
+            -0.1rem 0 0.1rem #FFFFFF,
+            0 -0.1rem 0.1rem #FFFFFF,
+            -0.1rem 0.1rem 0.1rem #FFFFFF,
+            0.1rem -0.1rem 0.1rem #FFFFFF,
+            0.1rem -0.1rem 0.1rem #FFFFFF,
+            -0.1rem 0.1rem 0.1rem #FFFFFF,
+            -0.1rem -0.1rem 0.1rem #FFFFFF,
+            0.1rem 0.1rem 0.1rem #FFFFFF;
+}
+
+.img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+
+    text-align: right;
+
+    z-index: -1;
+}

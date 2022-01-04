@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.button {
+    max-width: 18rem;
+    height: 2.5rem;
+
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+
+    flex-grow: 1;
+    cursor: pointer;
+
+}
+
+.primary {
+    color: white;
+    background: rgba(100, 100, 100, 1);
+}
+
+.secondary {
+    color: rgba(58, 58, 58, 1);
+}
+
+.text {
+    user-select: none;
+}

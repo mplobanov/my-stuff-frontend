@@ -1,0 +1,292 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+"An object with an ID"
+interface Node {
+    "The ID of the object."
+    id: ID!
+}
+
+type ErrorType {
+    field: String!
+    messages: [String!]!
+}
+
+type GroupMutationPayload {
+    clientMutationId: String
+    errors: [ErrorType]
+    group: GroupNode
+}
+
+type GroupNode implements Node {
+    grOwner: UserNode!
+    "The ID of the object."
+    id: ID!
+    items(after: String, before: String, brand: String, color: String, first: Int, group: ID, last: Int, location: ID, name: String, offset: Int, owner: ID, size: String, status: ID, volume: String): ItemNodeConnection!
+    name: String!
+}
+
+type GroupNodeConnection {
+    "Contains the nodes in this connection."
+    edges: [GroupNodeEdge]!
+    "Pagination data for this connection."
+    pageInfo: PageInfo!
+}
+
+"A Relay edge containing a `GroupNode` and its cursor."
+type GroupNodeEdge {
+    "A cursor for use in pagination"
+    cursor: String!
+    "The item at the end of the edge"
+    node: GroupNode
+}
+
+type ItemMutationPayload {
+    clientMutationId: String
+    errors: [ErrorType]
+    item: ItemNode
+}
+
+type ItemNode implements Node {
+    brand: String!
+    color: String!
+    group: GroupNode!
+    "The ID of the object."
+    id: ID!
+    location: LocationNode!
+    name: String!
+    owner: UserNode!
+    size: String!
+    status: StatusNode!
+    volume: String!
+}
+
+type ItemNodeConnection {
+    "Contains the nodes in this connection."
+    edges: [ItemNodeEdge]!
+    "Pagination data for this connection."
+    pageInfo: PageInfo!
+}
+
+"A Relay edge containing a `ItemNode` and its cursor."
+type ItemNodeEdge {
+    "A cursor for use in pagination"
+    cursor: String!
+    "The item at the end of the edge"
+    node: ItemNode
+}
+
+type LocationMutationPayload {
+    clientMutationId: String
+    errors: [ErrorType]
+    location: LocationNode
+}
+
+type LocationNode implements Node {
+    "The ID of the object."
+    id: ID!
+    items(after: String, before: String, brand: String, color: String, first: Int, group: ID, last: Int, location: ID, name: String, offset: Int, owner: ID, size: String, status: ID, volume: String): ItemNodeConnection!
+    locOwner: UserNode!
+    name: String!
+}
+
+type LocationNodeConnection {
+    "Contains the nodes in this connection."
+    edges: [LocationNodeEdge]!
+    "Pagination data for this connection."
+    pageInfo: PageInfo!
+}
+
+"A Relay edge containing a `LocationNode` and its cursor."
+type LocationNodeEdge {
+    "A cursor for use in pagination"
+    cursor: String!
+    "The item at the end of the edge"
+    node: LocationNode
+}
+
+type Mutation {
+    addGroup(input: GroupMutationInput!): GroupMutationPayload
+    addItem(input: ItemMutationInput!): ItemMutationPayload
+    addLocation(input: LocationMutationInput!): LocationMutationPayload
+    addStatus(input: StatusMutationInput!): StatusMutationPayload
+    editGroup(input: GroupMutationInput!): GroupMutationPayload
+    editItem(input: ItemMutationInput!): ItemMutationPayload
+    editLocation(input: LocationMutationInput!): LocationMutationPayload
+    editStatus(input: StatusMutationInput!): StatusMutationPayload
+    login(login: String!, password: String!): UserLoginMutation
+    logout: UserLogoutMutation
+    refreshToken(token: String): Refresh
+    register(firstName: String!, login: String!, password: String!): UserCreateMutation
+    "Obtain JSON Web Token mutation"
+    tokenAuth(password: String!, username: String!): ObtainJSONWebToken
+    verifyToken(token: String): Verify
+}
+
+"Obtain JSON Web Token mutation"
+type ObtainJSONWebToken {
+    payload: GenericScalar!
+    refreshExpiresIn: Int!
+    token: String!
+}
+
+"The Relay compliant `PageInfo` type, containing data necessary to paginate this connection."
+type PageInfo {
+    "When paginating forwards, the cursor to continue."
+    endCursor: String
+    "When paginating forwards, are there more items?"
+    hasNextPage: Boolean!
+    "When paginating backwards, are there more items?"
+    hasPreviousPage: Boolean!
+    "When paginating backwards, the cursor to continue."
+    startCursor: String
+}
+
+type Query {
+    allGroups(after: String, before: String, first: Int, grOwner: ID, last: Int, name: String, offset: Int): GroupNodeConnection
+    allItems(after: String, before: String, brand: String, color: String, first: Int, group: ID, last: Int, location: ID, name: String, offset: Int, owner: ID, size: String, status: ID, volume: String): ItemNodeConnection
+    allLocations(after: String, before: String, first: Int, last: Int, locOwner: ID, name: String, offset: Int): LocationNodeConnection
+    allStatuses(after: String, before: String, first: Int, last: Int, name: String, offset: Int, stOwner: ID): StatusNodeConnection
+    currentUser: UserNode
+    group(
+        "The ID of the object"
+        id: ID!
+    ): GroupNode
+    item(
+        "The ID of the object"
+        id: ID!
+    ): ItemNode
+    location(
+        "The ID of the object"
+        id: ID!
+    ): LocationNode
+    status(
+        "The ID of the object"
+        id: ID!
+    ): StatusNode
+}
+
+type Refresh {
+    payload: GenericScalar!
+    refreshExpiresIn: Int!
+    token: String!
+}
+
+type StatusMutationPayload {
+    clientMutationId: String
+    errors: [ErrorType]
+    status: StatusNode
+}
+
+type StatusNode implements Node {
+    "The ID of the object."
+    id: ID!
+    items(after: String, before: String, brand: String, color: String, first: Int, group: ID, last: Int, location: ID, name: String, offset: Int, owner: ID, size: String, status: ID, volume: String): ItemNodeConnection!
+    name: String!
+    stOwner: UserNode!
+}
+
+type StatusNodeConnection {
+    "Contains the nodes in this connection."
+    edges: [StatusNodeEdge]!
+    "Pagination data for this connection."
+    pageInfo: PageInfo!
+}
+
+"A Relay edge containing a `StatusNode` and its cursor."
+type StatusNodeEdge {
+    "A cursor for use in pagination"
+    cursor: String!
+    "The item at the end of the edge"
+    node: StatusNode
+}
+
+type UserCreateMutation {
+    currentUser: UserNode
+}
+
+type UserLoginMutation {
+    currentUser: UserNode
+}
+
+type UserLogoutMutation {
+    logoutUser: UserNode
+}
+
+type UserNode implements Node {
+    dateJoined: DateTime!
+    email: String!
+    firstName: String!
+    "The ID of the object."
+    id: ID!
+    "Designates whether this user should be treated as active. Unselect this instead of deleting accounts."
+    isActive: Boolean!
+    "Designates whether the user can log into this admin site."
+    isStaff: Boolean!
+    "Designates that this user has all permissions without explicitly assigning them."
+    isSuperuser: Boolean!
+    items(after: String, before: String, brand: String, color: String, first: Int, group: ID, last: Int, location: ID, name: String, offset: Int, owner: ID, size: String, status: ID, volume: String): ItemNodeConnection!
+    lastLogin: DateTime
+    lastName: String!
+    locations(after: String, before: String, first: Int, last: Int, locOwner: ID, name: String, offset: Int): LocationNodeConnection!
+    password: String!
+    statuses(after: String, before: String, first: Int, last: Int, name: String, offset: Int, stOwner: ID): StatusNodeConnection!
+    stuffGroups(after: String, before: String, first: Int, grOwner: ID, last: Int, name: String, offset: Int): GroupNodeConnection!
+    "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+    username: String!
+}
+
+type Verify {
+    payload: GenericScalar!
+}
+
+"""
+
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+"""
+
+The `GenericScalar` scalar type represents a generic
+GraphQL scalar value that could be:
+String, Boolean, Int, Float, List or Object.
+"""
+scalar GenericScalar
+
+input GroupMutationInput {
+    clientMutationId: String
+    id: ID
+    name: String!
+}
+
+input ItemMutationInput {
+    brand: String
+    clientMutationId: String
+    color: String
+    group: ID!
+    id: ID
+    location: ID!
+    name: String!
+    size: String
+    status: ID!
+    volume: String
+}
+
+input LocationMutationInput {
+    clientMutationId: String
+    id: ID
+    name: String!
+}
+
+input StatusMutationInput {
+    clientMutationId: String
+    id: ID
+    name: String!
+}

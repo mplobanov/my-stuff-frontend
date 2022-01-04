@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+
+    max-width: 40rem;
+
+    transition: height;
+    transition-duration: 1s;
+}
+
+.titleRow {
+    /*background: lightgreen;*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.title {
+
+    flex-grow: 3;
+}
+
+.status {
+    padding: 0.3rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    /*line-height: 2.5rem;*/
+
+    text-transform: uppercase;
+    word-break: break-all;
+
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.2rem;
+    min-height: 2rem;
+
+}
+
+.statusName {
+
+}
+
+.detailsRow {
+    display: flex;
+    gap: 0.5rem 1rem;
+    /*background: lightblue;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.save {
+    display: flex;
+    justify-content: right;
+}
+
