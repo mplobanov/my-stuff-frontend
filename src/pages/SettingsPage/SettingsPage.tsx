@@ -8,6 +8,7 @@ import styles from './SettingsPage.module.css';
 import {UserCard} from "../../components/UserCard/UserCard";
 import {Button} from "../../components/Button/Button";
 import {useNavigate} from "react-router-dom";
+import {Support} from "../../components/Support/Support";
 
 export const SettingsPage: React.FC = () => {
     const {data, loading, error} = useUser();
@@ -35,7 +36,7 @@ export const SettingsPage: React.FC = () => {
                 <div className={styles.editFE_item} onClick={() => navigate("/list/status")}>Редактировать статусы</div>
                 <div className={styles.editFE_item} onClick={() => navigate("/list/location")}>Редактировать локации</div>
             </div>
-
+            <Support />
         </Page>
     );
 }

@@ -16,6 +16,7 @@ import {ChipGroup} from "../../components/ChipGroup/ChipGroup";
 import {useStatusSuggestions} from "../../hooks/useStatuses";
 import styles from './ItemList.module.css';
 import {useLocationSuggestions} from "../../hooks/useLocations";
+import {Support} from "../../components/Support/Support";
 
 export interface ItemListProps {
 }
@@ -83,6 +84,8 @@ export const ItemList: React.FC<ItemListProps> = () => {
         }
         <ItemCard quantity={<FontAwesomeIcon icon={faPlus} color={"rgba(0, 0, 0, 0.4)"}/>} status={''} name={'Добавить'} onClick={() => navigate('/item/new')} />
         </Grid>
+
+        <Support />
 
     </Page>;
 }

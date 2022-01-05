@@ -11,6 +11,7 @@ import {useNavigate} from "react-router-dom";
 import {Cog} from "../components/Cog/Cog";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Support} from "../components/Support/Support";
 
 
 export const GroupList: React.FC = () => {
@@ -21,7 +22,7 @@ export const GroupList: React.FC = () => {
     const groups = items?.currentUser?.stuffGroups.edges.map(group => group?.node);
 
     return <Page>
-        <Header headerText={'Мои вещи'} description={'Dff'} sideAction={<Cog onClick={() => {navigate('/settings')}}/>}/>
+        <Header headerText={'Мои вещи'} sideAction={<Cog onClick={() => {navigate('/settings')}}/>}/>
 
         {/* filters */}
 
@@ -44,6 +45,7 @@ export const GroupList: React.FC = () => {
                 <ItemCard quantity={<FontAwesomeIcon icon={faPlus} color={"rgba(0, 0, 0, 0.4)"}/>} status={""} name={"Добавить группу"} onClick={() => navigate("/edit/group/new")} />
             </Grid>
         }
+        <Support />
 
     </Page>;
 }
