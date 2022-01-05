@@ -76,15 +76,16 @@
 .save {
     display: flex;
     justify-content: right;
-    opacity: 100%;
-    transition-property: opacity, visibility, transform;
+    /*opacity: 100%;*/
+    transition-property: visibility, transform;
     transition-duration: 100ms;
     transform: none;
+    visibility: visible;
 }
 
 .save_inactive {
     visibility: hidden;
-    opacity: 0;
+    /*opacity: 0;*/
     transform: translateY(1rem);
 }
 
