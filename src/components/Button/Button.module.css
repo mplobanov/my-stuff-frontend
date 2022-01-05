@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
 .button {
-    max-width: 18rem;
+    /*max-width: 18rem;*/
     height: 2.5rem;
+    max-height: 2.5rem;
 
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);

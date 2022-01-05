@@ -7,5 +7,6 @@ export const pickColor = (s: string) => {
     const colorsPale = [
         'fef2f2', 'fffbeb', 'f7fee7', 'ecfdf5', 'ecfeff', 'eff6ff', 'f5f3ff', 'fdf4ff', 'fff1f2'
     ].map(s => `#${s}`);
-    return colorsPale[hash(s) % (colorsPale.length)];
+    return colorsPale[Math.abs(hash(s)) % (colorsPale.length)] ?? 'red';
 }
+

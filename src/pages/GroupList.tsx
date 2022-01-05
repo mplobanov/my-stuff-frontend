@@ -1,23 +1,27 @@
 import React from "react";
 import {Page} from "../components/Page/Page";
 import {Header} from "../components/Header/Header";
-import {useItems} from "../hooks/useItems";
+import {useItemsRaw} from "../hooks/useItems";
 import {Grid} from "../components/Grid/Grid";
 import {ItemCard} from "../components/ItemCard/ItemCard";
 import {Loading} from "../components/Loading/Loading";
 import {pickColor} from "../utils/pickColor";
 import {Error} from "../components/Error/Error";
 import {useNavigate} from "react-router-dom";
+import {Cog} from "../components/Cog/Cog";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 export const GroupList: React.FC = () => {
-    const {data: items, loading, error} = useItems();
+    const {data: items, loading, error} = useItemsRaw();
     const navigate = useNavigate();
 
 
     const groups = items?.currentUser?.stuffGroups.edges.map(group => group?.node);
 
     return <Page>
-        <Header headerText={'Мои вещи'} description={'Dff'} />
+        <Header headerText={'Мои вещи'} description={'Dff'} sideAction={<Cog onClick={() => {navigate('/settings')}}/>}/>
 
         {/* filters */}
 
@@ -37,6 +41,7 @@ export const GroupList: React.FC = () => {
                         key={group?.id ?? ''}
                     />
                 )}
+                <ItemCard quantity={<FontAwesomeIcon icon={faPlus} color={"rgba(0, 0, 0, 0.4)"}/>} status={""} name={"Добавить группу"} onClick={() => navigate("/edit/group/new")} />
             </Grid>
         }
 

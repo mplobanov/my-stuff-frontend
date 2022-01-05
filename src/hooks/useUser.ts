@@ -9,9 +9,13 @@ import {Register, RegisterVariables} from "../graphql/mutations/__generated__/Re
 export const useUser = (options?: QueryHookOptions) => useQuery<CurrentUser>(curUserQuery, options);
 
 export const useLogin = () => {
-    const {refetch} = useUser();
+    const {refetch} = useUser({
+        errorPolicy: "ignore",
+    });
 
-    const [makeLogin, loginResults] = useMutation<Login, LoginVariables>(loginUserQuery);
+    const [makeLogin, loginResults] = useMutation<Login, LoginVariables>(loginUserQuery, {
+        onError: error => console.log(error)
+    });
 
     const login = async (login: string, password: string) => {
         const results = await makeLogin({
@@ -38,7 +42,7 @@ export const useRegister = () => {
             }
         });
         if (!results.errors) {
-            await login(username, password);
+            return await login(username, password);
         }
     };
 

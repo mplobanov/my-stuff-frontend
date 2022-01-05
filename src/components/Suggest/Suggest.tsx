@@ -1,8 +1,10 @@
 import {Input, InputProps} from "../Input/Input";
 import {useField} from "formik";
 import styles from './Suggest.module.css';
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {Loading} from "../Loading/Loading";
+import {pickColor} from "../../utils/pickColor";
+import {SubmitState} from "../../utils/SubmitText";
 
 export interface Suggestion {
     name: string,
@@ -17,17 +19,24 @@ export interface SuggestProps extends InputProps {
     suggestions?: Suggestion[],
 }
 
-export const Suggest = ({name, loading, placeholder, suggestions, editable, setEdited, big}: SuggestProps) => {
+export const Suggest = ({name, loading, placeholder, suggestions, editable, setEdited, big, colorful, submitState}: SuggestProps) => {
     const [field, , helpers] = useField(`${name}.id`);
     const [nameField, , nameHelpers] = useField(`${name}.name`);
 
     const [suggOpened, setSuggOpened] = useState(false);
 
-    const handleClick = (sugg: Suggestion) => {
-        nameHelpers.setValue(sugg.name);
+    const handleClick = useCallback((sugg: Suggestion) => {
+        nameHelpers.setValue(sugg.name, false);
+        setTimeout(() => nameHelpers.setTouched(true, true));
         helpers.setValue(sugg.id);
         setSuggOpened(false);
-    }
+    }, [helpers, nameHelpers]);
+
+    useEffect(() => {
+        if (submitState === SubmitState.Submitting) {
+            setSuggOpened(false);
+        }
+    },[submitState, setSuggOpened]);
 
     useEffect(() => {
         if (field.value === '') {
@@ -44,11 +53,12 @@ export const Suggest = ({name, loading, placeholder, suggestions, editable, setE
 
     return <div className={styles.container}>
         <div onClick={() => setSuggOpened((opened) => !opened)} >
-            <Input name={`${name}.name`} placeholder={placeholder} editable={editable} setEdited={setEdited} big={big} loading={loading}/></div>
+            <Input name={`${name}.name`} placeholder={placeholder} editable={editable} setEdited={setEdited} big={big} loading={loading} colorful={colorful} submitState={submitState}/></div>
         {suggOpened &&
         <div className={styles.suggestions}>
             {suggestions && suggestions.map((suggestion) => <div className={styles.suggestion}
                                                                  onClick={() => handleClick(suggestion)}
+                                                                 style={colorful ? {background: pickColor(suggestion.name)} : {}}
                                                                  key={suggestion.id}>{suggestion.name}</div>)}
             {!suggestions && <div className={styles.suggestion}><Loading values={[true]} /></div>}
         </div>}

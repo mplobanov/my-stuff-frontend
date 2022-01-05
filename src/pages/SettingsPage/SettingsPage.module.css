@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.user_block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.editFE {
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: #eeeeee 1px solid;
+    border-top: #eeeeee 1px solid;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.editFE:last-child {
+    border-bottom: none;
+}
+
+.editFE_item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: #eeeeee 1px solid;
+    height: 3rem;
+    padding-left: 2rem;
+}

@@ -38,6 +38,8 @@
     font-size: 1.2rem;
     line-height: 1.45rem;
 
+    word-break: break-all;
+
     text-shadow:
                 0 0 0.1rem #FFFFFF,
                 0.1rem 0 0.1rem #FFFFFF,

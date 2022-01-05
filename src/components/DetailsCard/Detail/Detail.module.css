@@ -37,3 +37,7 @@
     letter-spacing: 0.1rem;
     padding: 0.2rem;
 }
+
+.error {
+    color: red;
+}

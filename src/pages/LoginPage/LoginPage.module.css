@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+.error {
+    color: red;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.narrow {
+    flex-grow: 1;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 760px){
+    .narrow {
+        max-width: 50rem;
+    }
+}
+
+.register {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration: underline;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.4);
+    letter-spacing: 0;
+    cursor: pointer;
+}

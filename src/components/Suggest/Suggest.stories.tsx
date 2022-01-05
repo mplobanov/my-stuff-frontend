@@ -88,3 +88,23 @@ Loading.args = {
     placeholder: "Логин",
 };
 
+export const Colorful = Template.bind({});
+Colorful.args = {
+    editable: true,
+    placeholder: "Логин",
+    suggestions: [
+        {
+            name: 'boo',
+            id: '123',
+        },
+        {
+            name: 'aaa',
+            id: '345',
+        },
+        {
+            name: 'bbb',
+            id: '5',
+        },
+    ],
+    colorful: true,
+};

@@ -10,6 +10,15 @@
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.5rem;
+
+}
+
+.header_container {
+    display: grid;
+
+    grid-template-columns: auto min-content;
+    align-items: center;
+
 }
 
 .description {

@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+}
+
+.userinfo {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.7);
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.accent {
+    color: black;
+
+    font-weight: 700;
+}

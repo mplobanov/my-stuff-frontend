@@ -38,12 +38,13 @@
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 1.2rem;
+    padding-left: 0.7rem !important;
 }
 
 .input.non_editable {
     background: white;
     color: black;
-    border-radius: 0;
+    /*border-radius: 0;*/
     /*padding: 0.2rem;*/
     padding-left: 0.2rem;
 
@@ -62,6 +63,10 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.error {
+    border: rgba(255, 0, 0, 0.3) 3px solid !important;
 }
 
 @keyframes loadingAnimation {

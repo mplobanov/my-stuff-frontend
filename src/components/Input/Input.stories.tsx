@@ -41,3 +41,10 @@ Loading.args = {
     placeholder: "Объем",
     loading: true,
 };
+
+export const Colorful = Template.bind({});
+Colorful.args = {
+    editable: false,
+    placeholder: "Объем",
+    colorful: true,
+};

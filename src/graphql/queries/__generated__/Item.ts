@@ -36,6 +36,10 @@ export interface Item_item_group {
 
 export interface Item_item {
   __typename: "ItemNode";
+  /**
+   * The ID of the object.
+   */
+  id: string;
   name: string;
   brand: string;
   color: string;

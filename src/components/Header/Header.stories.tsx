@@ -19,3 +19,10 @@ WithDescription.args = {
     headerText: 'Фильтры',
     description: 'Выберите нужные фильтры',
 }
+
+export const SideAction = Template.bind({});
+SideAction.args = {
+    headerText: 'Фильтры',
+    description: 'Выберите нужные фильтры',
+    sideAction: <p>SSS</p>
+}
