@@ -15,7 +15,9 @@ import {Support} from "../components/Support/Support";
 
 
 export const GroupList: React.FC = () => {
-    const {data: items, loading, error} = useItemsRaw();
+    const {data: items, loading, error} = useItemsRaw({
+        pollInterval: 3000,
+    });
     const navigate = useNavigate();
 
 
