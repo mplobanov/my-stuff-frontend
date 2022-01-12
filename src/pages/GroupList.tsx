@@ -36,9 +36,9 @@ export const GroupList: React.FC = () => {
             <Grid>
                 {groups?.map(group =>
                     <ItemCard
-                        quantity={group?.items.edges.length ?? <></>}
+                        quantity={group?.items.edges.length.toString()}
                         status={''}
-                        name={group?.name ?? 'N/A'}
+                        name={group?.name.toString() ?? 'N/A'}
                         onClick={() => navigate(`/group/${group?.id}`)}
                         backgroundColor={pickColor(group?.name ?? '')}
                         key={group?.id ?? ''}

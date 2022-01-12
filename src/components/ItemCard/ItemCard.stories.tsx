@@ -1,9 +1,5 @@
 import {ItemCard} from "./ItemCard";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-
-import jeans from '../../assets/jeans.png';
-import shirt from '../../assets/shirt.png';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -22,7 +18,7 @@ const Template: ComponentStory<typeof ItemCard> = (args) => <ItemCard {...args}/
 
 export const WashingJeans = Template.bind({});
 WashingJeans.args = {
-    quantity: 4,
+    quantity: "4",
     status: "В стирке",
     name: "Джинсы",
     backgroundColor: "rgb(254, 242, 242)",
@@ -30,7 +26,7 @@ WashingJeans.args = {
 
 export const CleanShirt = Template.bind({});
 CleanShirt.args = {
-    quantity: 3,
+    quantity: "3",
     status: "Чистое",
     name: "Рубашка",
     backgroundColor: "rgb(236, 253, 245)",
@@ -38,7 +34,7 @@ CleanShirt.args = {
 
 export const LongName = Template.bind({});
 LongName.args = {
-    quantity: 15,
+    quantity: "15",
     status: "В стирке",
     name: "Джинсы гавайские",
     backgroundColor: "rgb(254, 242, 242)",

@@ -4,12 +4,13 @@
     width: 8rem;
     height: 8rem;
     border-radius: 0.75rem;
-    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+    /*filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));*/
 
     overflow: hidden;
     cursor: pointer;
 
     user-select: none;
+    position: relative;
 }
 
 .quantity {

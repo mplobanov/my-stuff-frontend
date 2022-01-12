@@ -5,7 +5,7 @@ interface ItemCardProps {
      * Amount of items to display. Can be any JSX Element or number.
      * Example: 2, 3, 7
      */
-    quantity?: number | JSX.Element,
+    quantity?: string | JSX.Element,
     /**
      * Status of item.
      * Example: in the wash, ready, worn.
