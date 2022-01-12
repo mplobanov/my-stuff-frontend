@@ -29,7 +29,7 @@ export const LoginPage: React.FC = () => {
     }
 
     const validationSchema = useMemo(() => {
-        return object({login: string().required(), password: string().required()});
+        return object({login: string().required("Логин обязателен"), password: string().required("Пароль обязателен")});
     }, []);
 
     return (
@@ -43,8 +43,9 @@ export const LoginPage: React.FC = () => {
                             }
                         }
                         }>
-                            <InputDetail editable={true} name={'login'} setEdited={noop} title={'Логин'}/>
-                            <InputDetail editable={true} name={'password'} setEdited={noop} title={'Пароль'} password/>
+                            <InputDetail editable={true} name={'login'} setEdited={noop} title={'Логин'} placeholder={""}/>
+                            <InputDetail editable={true} name={'password'} setEdited={noop} title={'Пароль'} password placeholder={""}/>
+                            <div className={styles.buttonSpace} />
                             <Button text={loginResults.loading ? "Входим..." : 'Войти'} onClick={props.submitForm}/>
                         </Form>}
                     </Formik>

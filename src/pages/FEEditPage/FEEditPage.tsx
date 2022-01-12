@@ -12,6 +12,7 @@ import {Button} from "../../components/Button/Button";
 import {Loading} from "../../components/Loading/Loading";
 import {SubmitState, submitText} from "../../utils/SubmitText";
 import {Cog} from "../../components/Cog/Cog";
+import styles from '../LoginPage/LoginPage.module.css';
 
 export interface FEEditPageProps {
     useFESuggestions: () => (Suggestion[] | undefined),
@@ -52,6 +53,7 @@ export const FEEditPage: React.FC<FEEditPageProps> = ({useFEMutate, useFESuggest
             {suggs && <Formik initialValues={suggs.find(s => s.id === entityID) ?? emptyForeignEntity} onSubmit={handleSubmit}>
                 {props => <Form>
                     <InputDetail editable={true} name={'name'} setEdited={noop} title={'Название'} />
+                    <div className={styles.buttonSpace} />
                     <Button text={submitText(submitState)} onClick={() => props.submitForm()} />
                 </Form>}
             </Formik>}

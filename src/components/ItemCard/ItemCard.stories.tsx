@@ -25,8 +25,7 @@ WashingJeans.args = {
     quantity: 4,
     status: "В стирке",
     name: "Джинсы",
-    backgroundColor: "rgba(253, 219, 146, 0.5)",
-    imageUrl: jeans,
+    backgroundColor: "rgb(254, 242, 242)",
 }
 
 export const CleanShirt = Template.bind({});
@@ -34,8 +33,7 @@ CleanShirt.args = {
     quantity: 3,
     status: "Чистое",
     name: "Рубашка",
-    backgroundColor: "rgba(194, 233, 251, 0.5)",
-    imageUrl: shirt,
+    backgroundColor: "rgb(236, 253, 245)",
 }
 
 export const LongName = Template.bind({});
@@ -43,8 +41,7 @@ LongName.args = {
     quantity: 15,
     status: "В стирке",
     name: "Джинсы гавайские",
-    backgroundColor: "rgba(253, 219, 146, 0.5)",
-    imageUrl: jeans,
+    backgroundColor: "rgb(254, 242, 242)",
 }
 
 export const Add = Template.bind({});

@@ -73,7 +73,6 @@ export const ItemList: React.FC<ItemListProps> = () => {
                 .filter(item => !selectedLocations || item?.node?.location.id === selectedLocations)
                 .map(item =>
                     <ItemCard
-                        quantity={<></>}
                         status={item?.node?.status.name ?? ''}
                         name={item?.node?.name ?? 'N/A'}
                         onClick={() => navigate(`/item/${item?.node?.id}`)}

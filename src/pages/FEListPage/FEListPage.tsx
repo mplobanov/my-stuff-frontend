@@ -30,7 +30,6 @@ export const FEListPage: React.FC<FEListPageProps> = ({entityName, useFESuggesti
                 {suggs && suggs.map(sugg =>
                     <ItemCard
                         key={sugg.id}
-                        quantity={<></>}
                         status={""}
                         name={sugg.name}
                         onClick={() => navigate(`/edit/${entityNameEng}/${sugg.id}`)}

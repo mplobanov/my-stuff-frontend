@@ -18,6 +18,7 @@ interface InputDetailProps extends DetailProps {
     loading?: boolean,
     submitState?: SubmitState,
     password?: boolean,
+    placeholder?: string,
 }
 
 interface SuggestDetailProps extends InputDetailProps {
@@ -26,23 +27,23 @@ interface SuggestDetailProps extends InputDetailProps {
 
 export const Detail: React.FC<DetailProps> = ({title, error, children}) => {
     return <div className={`${styles.container}`} >
-            {children}
         <div className={`${styles.key} ${error ? styles.error : ''}`}>{error ? error :title}</div>
+            {children}
     </div>;
 };
 
-export const InputDetail = ({title, ...props}: InputDetailProps) => {
+export const InputDetail = ({title, placeholder, ...props}: InputDetailProps) => {
     const [ ,meta, ] = useField(props.name);
 
     return <Detail title={title} error={meta.touched ? meta.error : ''}>
-        <Input placeholder={"N/A"} {...props} />
+        <Input placeholder={placeholder ?? "N/A"} {...props} />
     </Detail>
 }
 
-export const SuggestDetail = ({title, ...props}: SuggestDetailProps) => {
+export const SuggestDetail = ({title, placeholder, ...props}: SuggestDetailProps) => {
     const [ ,meta, ] = useField(`${props.name}.name`);
 
     return <Detail title={title} error={meta.touched ? meta.error : ''}>
-        <Suggest placeholder={"N/A"} {...props} />
+        <Suggest placeholder={placeholder ?? "N/A"} {...props} />
     </Detail>
 }

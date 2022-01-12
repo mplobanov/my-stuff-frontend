@@ -40,9 +40,6 @@ export const RegisterPage: React.FC = () => {
         if (values.password.length < 8) {
             errors['password'] = 'Минимум 8 символов';
         }
-        if (values.passwordRepeat.length < 8) {
-            errors['passwordRepeat'] = 'Минимум 8 символов';
-        }
         if (values.passwordRepeat !== values.password) {
             errors['passwordRepeat'] = 'Пароли не совпадают.';
         }
@@ -60,11 +57,12 @@ export const RegisterPage: React.FC = () => {
                     }
                 }
                 }>
-                    <InputDetail editable={true} name={'firstName'} setEdited={noop} title={'Имя'}/>
-                    <InputDetail editable={true} name={'login'} setEdited={noop} title={'Логин'}/>
-                    <InputDetail editable={true} name={'password'} setEdited={noop} title={'Пароль'} password/>
-                    <InputDetail editable={true} name={'passwordRepeat'} setEdited={noop} title={'Пароль еще раз'}
+                    <InputDetail editable={true} name={'firstName'} setEdited={noop} title={'Имя'} placeholder={"Иван"}/>
+                    <InputDetail editable={true} name={'login'} setEdited={noop} title={'Логин'} placeholder={"i.ivanov"}/>
+                    <InputDetail editable={true} name={'password'} setEdited={noop} title={'Пароль'} password placeholder={""}/>
+                    <InputDetail editable={true} name={'passwordRepeat'} setEdited={noop} title={'Пароль еще раз'} placeholder={""}
                                  password/>
+                    <div className={styles.buttonSpace} />
                     <Button text={registerResults.loading ? "Регистрируем..." : 'Зарегистрироваться'}
                             onClick={props.submitForm}/>
                 </Form>}

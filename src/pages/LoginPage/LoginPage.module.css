@@ -41,3 +41,7 @@
     letter-spacing: 0;
     cursor: pointer;
 }
+
+.buttonSpace {
+    height: 1rem;
+}

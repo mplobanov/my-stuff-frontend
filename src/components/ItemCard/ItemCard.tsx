@@ -5,7 +5,7 @@ interface ItemCardProps {
      * Amount of items to display. Can be any JSX Element or number.
      * Example: 2, 3, 7
      */
-    quantity: number | JSX.Element,
+    quantity?: number | JSX.Element,
     /**
      * Status of item.
      * Example: in the wash, ready, worn.
@@ -35,7 +35,7 @@ export const ItemCard = ({quantity, status, name, imageUrl, backgroundColor = "#
 
     return <div className={styles.cardWrap} style={{backgroundColor: backgroundColor}}
                 onClick={() => onClick()}>
-        <div className={styles.quantity}>{quantity}</div>
+        {!!quantity && <div className={styles.quantity}  style={{backgroundColor: backgroundColor}}>{quantity}</div>}
         <div className={styles.name}>{name}</div>
         <div className={styles.status}>{status}</div>
         {imageUrl ? (<img src={imageUrl} alt={"Item"} className={styles.img}/>) : undefined}
