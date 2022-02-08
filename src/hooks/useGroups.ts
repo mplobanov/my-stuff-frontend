@@ -2,7 +2,7 @@ import {QueryHookOptions, QueryResult, useMutation, useQuery} from "@apollo/clie
 import {Groups} from "../graphql/queries/__generated__/Groups";
 import {groupsQuery} from "../graphql/queries/groups";
 import {useMemo} from "react";
-import {Suggestion} from "../components/Suggest/Suggest";
+import {Suggestion} from "../components/logic/Suggest/Suggest";
 import {ForeignEntity} from "./useItems";
 import {EditGroup, EditGroupVariables} from "../graphql/mutations/__generated__/EditGroup";
 import {editGroupQuery} from "../graphql/mutations/EditGroup";

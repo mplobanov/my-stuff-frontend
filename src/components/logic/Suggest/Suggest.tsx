@@ -2,9 +2,9 @@ import {Input, InputProps} from "../Input/Input";
 import {useField} from "formik";
 import styles from './Suggest.module.css';
 import {useCallback, useEffect, useState} from "react";
-import {Loading} from "../Loading/Loading";
-import {pickColor} from "../../utils/pickColor";
-import {SubmitState} from "../../utils/SubmitText";
+import {Loading} from "../../ui/Loading/Loading";
+import {pickColor} from "../../../utils/pickColor";
+import {SubmitState} from "../../../utils/SubmitText";
 
 export interface Suggestion {
     name: string,

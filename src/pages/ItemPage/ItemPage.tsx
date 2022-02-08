@@ -1,16 +1,16 @@
-import {DetailsCard} from "../../components/DetailsCard/DetailsCard";
+import {DetailsCard} from "../../components/logic/DetailsCard/DetailsCard";
 import {useNavigate, useParams} from "react-router-dom";
 import {emptyItem, ItemValues, useItem, useItemMutate} from "../../hooks/useItems";
-import {Error} from "../../components/Error/Error";
+import {Error} from "../../components/utils/Error/Error";
 import {useLocationMutate, useLocationSuggestions} from "../../hooks/useLocations";
 import {Formik} from "formik";
 import {useGroupMutate, useGroupSuggestions} from "../../hooks/useGroups";
 import {useStatusMutate, useStatusSuggestions} from "../../hooks/useStatuses";
 import React, {useEffect, useState} from "react";
 import {object, string} from "yup";
-import {Page} from "../../components/Page/Page";
-import {Header} from "../../components/Header/Header";
-import {Cog} from "../../components/Cog/Cog";
+import {Page} from "../../components/ui/Page/Page";
+import {Header} from "../../components/ui/Header/Header";
+import {Cog} from "../../components/ui/Cog/Cog";
 import {SubmitState} from "../../utils/SubmitText";
 
 export const ItemPage: React.FC = () => {

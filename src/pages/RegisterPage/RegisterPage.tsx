@@ -1,11 +1,11 @@
 import React from "react";
-import {Header} from "../../components/Header/Header";
+import {Header} from "../../components/ui/Header/Header";
 import styles from "../LoginPage/LoginPage.module.css";
 import {translate} from "../../utils/translate";
 import {Form, Formik} from "formik";
-import {InputDetail} from "../../components/DetailsCard/Detail/Detial";
+import {InputDetail} from "../../components/logic/DetailsCard/Detail/Detial";
 import noop from "../../utils/noop";
-import {Button} from "../../components/Button/Button";
+import {Button} from "../../components/ui/Button/Button";
 import {useRegister} from "../../hooks/useUser";
 import {useNavigate} from "react-router-dom";
 import {NarrowContainer} from "../LoginPage/NarrowContainer";

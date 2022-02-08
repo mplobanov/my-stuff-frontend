@@ -1,17 +1,17 @@
 import React from "react";
-import {Page} from "../components/Page/Page";
-import {Header} from "../components/Header/Header";
+import {Page} from "../components/ui/Page/Page";
+import {Header} from "../components/ui/Header/Header";
 import {useItemsRaw} from "../hooks/useItems";
-import {Grid} from "../components/Grid/Grid";
-import {ItemCard} from "../components/ItemCard/ItemCard";
-import {Loading} from "../components/Loading/Loading";
+import {Grid} from "../components/utils/Grid/Grid";
+import {ItemCard} from "../components/ui/ItemCard/ItemCard";
+import {Loading} from "../components/ui/Loading/Loading";
 import {pickColor} from "../utils/pickColor";
-import {Error} from "../components/Error/Error";
+import {Error} from "../components/utils/Error/Error";
 import {useNavigate} from "react-router-dom";
-import {Cog} from "../components/Cog/Cog";
+import {Cog} from "../components/ui/Cog/Cog";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Support} from "../components/Support/Support";
+import {Support} from "../components/ui/Support/Support";
 
 
 export const GroupList: React.FC = () => {

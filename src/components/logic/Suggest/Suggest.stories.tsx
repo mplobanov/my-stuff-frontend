@@ -1,7 +1,7 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {Suggest} from "./Suggest";
 import {Form, Formik} from "formik";
-import noop from "../../utils/noop";
+import noop from "../../../utils/noop";
 
 export default {
     title: "Suggest",

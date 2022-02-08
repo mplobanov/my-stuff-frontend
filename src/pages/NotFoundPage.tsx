@@ -1,10 +1,10 @@
 import React from "react";
-import {Page} from "../components/Page/Page";
-import {Header} from "../components/Header/Header";
+import {Page} from "../components/ui/Page/Page";
+import {Header} from "../components/ui/Header/Header";
 import {useUser} from "../hooks/useUser";
-import {Button} from "../components/Button/Button";
+import {Button} from "../components/ui/Button/Button";
 import {useNavigate} from "react-router-dom";
-import {Support} from "../components/Support/Support";
+import {Support} from "../components/ui/Support/Support";
 
 export const NotFoundPage: React.FC = () => {
     const {data} = useUser();

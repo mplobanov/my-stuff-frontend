@@ -1,14 +1,14 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {DetailsCard} from "./DetailsCard";
-import {useLocationSuggestions} from "../../hooks/useLocations";
+import {useLocationSuggestions} from "../../../hooks/useLocations";
 import {useEffect, useState} from "react";
 import {Suggestion} from "../Suggest/Suggest";
 import {Formik} from 'formik';
-import {emptyItem} from "../../hooks/useItems";
-import {useGroupSuggestions} from "../../hooks/useGroups";
-import {useStatusSuggestions} from "../../hooks/useStatuses";
+import {emptyItem} from "../../../hooks/useItems";
+import {useGroupSuggestions} from "../../../hooks/useGroups";
+import {useStatusSuggestions} from "../../../hooks/useStatuses";
 import {object, string} from 'yup'
-import {SubmitState} from "../../utils/SubmitText";
+import {SubmitState} from "../../../utils/SubmitText";
 
 const makeSuggsMock = (returnDict: Suggestion[]) => {
     return () => {

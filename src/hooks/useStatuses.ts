@@ -2,7 +2,7 @@ import {QueryHookOptions, useMutation, useQuery} from "@apollo/client";
 import {statusesQuery} from "../graphql/queries/statuses";
 import {Statuses} from "../graphql/queries/__generated__/Statuses";
 import {useMemo} from "react";
-import {Suggestion} from "../components/Suggest/Suggest";
+import {Suggestion} from "../components/logic/Suggest/Suggest";
 import {EditStatus, EditStatusVariables} from "../graphql/mutations/__generated__/EditStatus";
 import {editStatusQuery} from "../graphql/mutations/EditStatus";
 import {ForeignEntity} from "./useItems";

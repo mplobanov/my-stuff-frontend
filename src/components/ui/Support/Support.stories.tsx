@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof Support>;
 
 
-const Template: ComponentStory<typeof Support> = args => <Support />;
+const Template: ComponentStory<typeof Support> = () => <Support />;
 
 export const Regular = Template.bind({});
 Regular.args = {

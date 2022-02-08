@@ -1,15 +1,15 @@
 import React from "react";
-import {Suggestion} from "../../components/Suggest/Suggest";
-import {Page} from "../../components/Page/Page";
-import {Header} from "../../components/Header/Header";
-import {Grid} from "../../components/Grid/Grid";
-import {Loading} from "../../components/Loading/Loading";
-import {ItemCard} from "../../components/ItemCard/ItemCard";
+import {Suggestion} from "../../components/logic/Suggest/Suggest";
+import {Page} from "../../components/ui/Page/Page";
+import {Header} from "../../components/ui/Header/Header";
+import {Grid} from "../../components/utils/Grid/Grid";
+import {Loading} from "../../components/ui/Loading/Loading";
+import {ItemCard} from "../../components/ui/ItemCard/ItemCard";
 import {useNavigate} from "react-router-dom";
 import {pickColor} from "../../utils/pickColor";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Cog} from "../../components/Cog/Cog";
+import {Cog} from "../../components/ui/Cog/Cog";
 
 export interface FEListPageProps {
     useFESuggestions: () => (Suggestion[] | undefined),

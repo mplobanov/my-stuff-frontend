@@ -1,17 +1,17 @@
 import {NarrowContainer} from "../LoginPage/NarrowContainer";
 import React, {useEffect, useState} from "react";
-import {Suggestion} from "../../components/Suggest/Suggest";
+import {Suggestion} from "../../components/logic/Suggest/Suggest";
 import {FEMutateHook} from "../../hooks/useGroups";
 import {useNavigate, useParams} from "react-router-dom";
-import {Header} from "../../components/Header/Header";
+import {Header} from "../../components/ui/Header/Header";
 import {emptyForeignEntity} from "../../hooks/useItems";
 import {Form, Formik} from "formik";
-import {InputDetail} from "../../components/DetailsCard/Detail/Detial";
+import {InputDetail} from "../../components/logic/DetailsCard/Detail/Detial";
 import noop from "../../utils/noop";
-import {Button} from "../../components/Button/Button";
-import {Loading} from "../../components/Loading/Loading";
+import {Button} from "../../components/ui/Button/Button";
+import {Loading} from "../../components/ui/Loading/Loading";
 import {SubmitState, submitText} from "../../utils/SubmitText";
-import {Cog} from "../../components/Cog/Cog";
+import {Cog} from "../../components/ui/Cog/Cog";
 import styles from '../LoginPage/LoginPage.module.css';
 
 export interface FEEditPageProps {

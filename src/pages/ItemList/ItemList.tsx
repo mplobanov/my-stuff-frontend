@@ -1,22 +1,22 @@
 import React, {useState} from "react";
-import {Page} from "../../components/Page/Page";
-import {Header} from "../../components/Header/Header";
+import {Page} from "../../components/ui/Page/Page";
+import {Header} from "../../components/ui/Header/Header";
 import {useItemsRaw} from "../../hooks/useItems";
-import {Grid} from "../../components/Grid/Grid";
-import {ItemCard} from "../../components/ItemCard/ItemCard";
-import {Loading} from "../../components/Loading/Loading";
+import {Grid} from "../../components/utils/Grid/Grid";
+import {ItemCard} from "../../components/ui/ItemCard/ItemCard";
+import {Loading} from "../../components/ui/Loading/Loading";
 import {pickColor} from "../../utils/pickColor";
-import {Error} from "../../components/Error/Error";
+import {Error} from "../../components/utils/Error/Error";
 import {Items_currentUser_stuffGroups_edges} from "../../graphql/queries/__generated__/Items";
 import {useNavigate, useParams} from "react-router-dom";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Cog} from "../../components/Cog/Cog";
-import {ChipGroup} from "../../components/ChipGroup/ChipGroup";
+import {Cog} from "../../components/ui/Cog/Cog";
+import {ChipGroup} from "../../components/ui/ChipGroup/ChipGroup";
 import {useStatusSuggestions} from "../../hooks/useStatuses";
 import styles from './ItemList.module.css';
 import {useLocationSuggestions} from "../../hooks/useLocations";
-import {Support} from "../../components/Support/Support";
+import {Support} from "../../components/ui/Support/Support";
 
 export interface ItemListProps {
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Avatar.module.css';
-import {pickColor} from "../../utils/pickColor";
+import {pickColor} from "../../../utils/pickColor";
 
 export interface AvatarProps {
     name: string,

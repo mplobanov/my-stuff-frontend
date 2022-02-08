@@ -1,8 +1,8 @@
-import {Header} from "../../components/Header/Header";
+import {Header} from "../../components/ui/Header/Header";
 import {Form, Formik} from "formik";
-import {InputDetail} from "../../components/DetailsCard/Detail/Detial";
+import {InputDetail} from "../../components/logic/DetailsCard/Detail/Detial";
 import noop from "../../utils/noop";
-import {Button} from "../../components/Button/Button";
+import {Button} from "../../components/ui/Button/Button";
 import {useLogin} from "../../hooks/useUser";
 import {useMemo} from "react";
 import {useNavigate} from "react-router-dom";

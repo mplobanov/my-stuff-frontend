@@ -1,16 +1,16 @@
 import styles from './DetailsCard.module.css';
 import {InputDetail, SuggestDetail} from "./Detail/Detial";
-import {Button} from "../Button/Button";
+import {Button} from "../../ui/Button/Button";
 import {Form, useFormikContext} from "formik";
-import {pickColor} from "../../utils/pickColor";
+import {pickColor} from "../../../utils/pickColor";
 import {useEffect, useMemo, useState} from "react";
 import {Input} from "../Input/Input";
-import {useLocationSuggestions} from "../../hooks/useLocations";
-import {useGroupSuggestions} from "../../hooks/useGroups";
+import {useLocationSuggestions} from "../../../hooks/useLocations";
+import {useGroupSuggestions} from "../../../hooks/useGroups";
 import {Suggest} from "../Suggest/Suggest";
-import {useStatusSuggestions} from "../../hooks/useStatuses";
-import {ItemValues} from "../../hooks/useItems";
-import {SubmitState, submitText} from "../../utils/SubmitText";
+import {useStatusSuggestions} from "../../../hooks/useStatuses";
+import {ItemValues} from "../../../hooks/useItems";
+import {SubmitState, submitText} from "../../../utils/SubmitText";
 
 export interface DetailsCardProps {
     editable: boolean,

@@ -1,8 +1,8 @@
 import styles from './Input.module.css';
 import {useCallback, useEffect, useState} from "react";
 import {useField} from "formik";
-import {pickColor} from "../../utils/pickColor";
-import {SubmitState} from "../../utils/SubmitText";
+import {pickColor} from "../../../utils/pickColor";
+import {SubmitState} from "../../../utils/SubmitText";
 
 
 export interface InputProps {

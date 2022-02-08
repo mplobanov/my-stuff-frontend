@@ -2,7 +2,7 @@ import {QueryHookOptions, QueryResult, useMutation, useQuery} from "@apollo/clie
 import {locationsQuery} from "../graphql/queries/locations";
 import {Locations} from "../graphql/queries/__generated__/Locations";
 import {useMemo} from "react";
-import {Suggestion} from "../components/Suggest/Suggest";
+import {Suggestion} from "../components/logic/Suggest/Suggest";
 import {editLocationQuery} from "../graphql/mutations/EditLocation";
 import {EditLocation, EditLocationVariables} from "../graphql/mutations/__generated__/EditLocation";
 import {ForeignEntity} from "./useItems";

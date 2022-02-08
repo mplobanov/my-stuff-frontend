@@ -1,7 +1,7 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {Input} from "./Input";
 import {Form, Formik} from "formik";
-import noop from "../../utils/noop";
+import noop from "../../../utils/noop";
 
 export default {
     title: "Input",

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './LoginPage.module.css';
-import {Page} from "../../components/Page/Page";
+import {Page} from "../../components/ui/Page/Page";
 
 export const NarrowContainer: React.FC = ({children}) => {
     return (

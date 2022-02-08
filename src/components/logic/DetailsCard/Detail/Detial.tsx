@@ -3,7 +3,7 @@ import {Input} from "../../Input/Input";
 import React from "react";
 import {Suggest, Suggestion} from "../../Suggest/Suggest";
 import {useField} from "formik";
-import {SubmitState} from "../../../utils/SubmitText";
+import {SubmitState} from "../../../../utils/SubmitText";
 
 interface DetailProps {
     title: string;
