@@ -30,7 +30,7 @@ npm run start
 npm run storybook
 ```
 
-На данный момент endpoint бека: [api.stuff.lbnv.mp](https://api.stuff.lbnv.mp/graphql/) (включен GraphiQL)
+Когда-то работал endpoint бека: [api.stuff.lbnv.mp](https://api.stuff.lbnv.mp/graphql/) (включен GraphiQL)
 
 Репозиторий бека: [mplobanov/mystuff_backend](https://github.com/mplobanov/mystuff_backend)
 
