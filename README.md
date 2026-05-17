@@ -1,39 +1,31 @@
-# Приложение для учёта вещей
+# my-stuff-frontend
 
-Складское приложение для учёта одежды в быту. 
+A fullstack inventory web app built in 2022 as a learning project for the **React + TypeScript + GraphQL + Apollo** stack. Items (clothing in my case) with groups, locations, and per-item status; full auth flow; GraphQL contract throughout. Backed by a Django + Graphene API I also wrote ([`mplobanov/mystuff_backend`](https://github.com/mplobanov/mystuff_backend)).
 
-Маленький учебный проект.
+## What the app does
 
-### Стек
-- **React** приложение, создано с **CRA** ([create-react-app](https://create-react-app.dev/))
-- **TypeScript**
-- **GraphQL** для связи с беком, клиент **Apollo Client**
-- **CSS Modules** для стилей, без препроцессоров
-- **Storybook** чтобы смотреть комопненты по отдельности
-- __React-router__ для роутинга
+- **Auth** — registration, login, current-user session
+- **Inventory** — items with brand, color, size, volume, free-text name; filter by any combination plus group, location, and status
+- **Hierarchy** — groups → items, with per-item location and status assignments
+- **Settings** — manage your own groups / locations / statuses
+- **Forms** — Formik + Yup throughout (auth, item editing, settings)
 
-### Как запустить
-```shell
-# клонируем репозиторий
-git clone https://github.com/mplobanov/my-stuff-frontend.git
+## Stack
 
-# заходим в папку
-cd my-stuff-frontend 
+- **UI:** React 17, TypeScript 4, CSS Modules (no preprocessor)
+- **Data:** Apollo Client 3, GraphQL 15 with Relay-style pagination
+- **Routing:** React Router 6
+- **Forms:** Formik + Yup
+- **Component dev:** Storybook 6
+- **Build:** Create React App
+- **Backend:** Django + Graphene (separate repo, linked above)
 
-# устанавливаем зависимости
-npm i 
+## Architecture notes
 
-# запускаем приложение
-npm run start
+- Custom hooks (`useItems`, `useGroups`, `useLocations`, `useStatuses`, `useUser`) wrap Apollo queries and mutations so each page gets a clean domain-specific interface instead of raw GraphQL calls.
+- GraphQL schema is checked in (`schema.graphql` + `schema.json`) and used for editor tooling and codegen.
+- Dev environment runs over HTTPS locally — the auth flow needed it; see the `start` script in `package.json`.
 
-# или можем запустить сторибук
-npm run storybook
-```
+## Status
 
-Когда-то работал endpoint бека: [api.stuff.lbnv.mp](https://api.stuff.lbnv.mp/graphql/) (включен GraphiQL)
-
-Репозиторий бека: [mplobanov/mystuff_backend](https://github.com/mplobanov/mystuff_backend)
-
-Если вы запустили его локально на [http://0.0.0.0:8000/graphql/](http://0.0.0.0:8000/graphql/), то поменяйте endpoint на фронте в [appoloClient.ts](./src/utils/apolloClient.ts)
-
-При локальном запуске нужно установить сертификаты HTTPS.
+Hosted backend endpoint (`api.stuff.lbnv.mp`) is no longer running, so the live app isn't operable. The repo stands on its own as a code reference.
